@@ -44,7 +44,7 @@ public class Delivery_demands {
 	@Column(name = "notes")
 	private String notes;
 	@Column(name = "statut")
-	private int statut;
+	private String statut;
 	@Column(name = "prix")
 	private int prix;
 
@@ -148,10 +148,10 @@ public class Delivery_demands {
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
-	public int getStatut() {
+	public String getStatut() {
 		return statut;
 	}
-	public void setStatut(int statut) {
+	public void setStatut(String statut) {
 		this.statut = statut;
 	}
 	public int getPrix() {
@@ -163,7 +163,7 @@ public class Delivery_demands {
 	public Delivery_demands(String nom_emetteur, String nom_destinataire, String address_emetteur,
 			String address_destinataire, String ville_emetteur, String ville_destinataire, String telephone_emetteur,
 			String telephone_destinataire, Date date_livraison, Time heure_livraison, Time marge, String description,
-			Timestamp date_creation, Timestamp date_modification, String notes, int statut, int prix) {
+			Timestamp date_creation, Timestamp date_modification, String notes, String statut, int prix) {
 		super();
 		this.nom_emetteur = nom_emetteur;
 		this.nom_destinataire = nom_destinataire;

@@ -24,7 +24,7 @@ import com.example.demo.repository.ArticlesRepository;
 public class ArticlesController {
 	@Autowired
 	private ArticlesRepository articlesRepository;
-
+ 
 	// add articles to database
 	@PostMapping("/articles/add")
 	public ResponseEntity<Map<String, Boolean>> addArticles(@RequestBody Articles article) {

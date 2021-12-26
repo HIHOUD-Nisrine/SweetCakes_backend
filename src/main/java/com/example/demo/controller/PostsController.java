@@ -49,11 +49,12 @@ public class PostsController {
 			@RequestParam("gout") String gout, @RequestParam("pack_ou_unite") String pack_ou_unite,
 			@RequestParam("nombre_unite_dispo") int nombre_unite_dispo, @RequestParam("dispo") Boolean dispo,
 			@RequestParam("description") String description, @RequestParam("type_pate") String type_pate) {
-
+		System.out.println("image path : " + System.getProperty("user.dir") );
 		System.out.println("categorie : " + categorie + " evenement : " + evenement +
 				" prix : " + prix + " poids : " + poids + " nombre_part : " + nombre_part + " gout : " + gout
 				+ " pack_ou_unite : " + pack_ou_unite + " nombre_unite_dispo : " + nombre_unite_dispo +
 				" dispo : " + dispo);
+		
 
 		// image traitement
 		// 1- extract extention

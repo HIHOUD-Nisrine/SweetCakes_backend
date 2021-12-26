@@ -51,4 +51,13 @@ public class Cakes_demandsController {
 		cakes_demands updatedOldcakeDemand = cakes_demandsRepository.save(OldcakeDemand);
 		return ResponseEntity.ok(updatedOldcakeDemand);
 	}
+	@PostMapping("cakes_demands/{id}/updates")
+	public ResponseEntity<cakes_demands> updateOldDemands(@PathVariable Long id, @RequestBody cakes_demands cakeDemand) {
+
+		System.out.println("cakeDemand =====================> " + cakeDemand.getId_demand());
+		cakes_demands OldcakeDemand = cakes_demandsRepository.findById(id).orElseThrow();
+		OldcakeDemand.setPrix(cakeDemand.getPrix());
+		cakes_demands updatedOldcakeDemand = cakes_demandsRepository.save(OldcakeDemand);
+		return ResponseEntity.ok(updatedOldcakeDemand);
+	}
 }
